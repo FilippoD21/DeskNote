@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="219.09338mm"
+   height="219.09291mm"
+   viewBox="0 0 219.09338 219.09291"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   sodipodi:docname="gear.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.68506594"
+     inkscape:cx="419.45657"
+     inkscape:cy="546.72248"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     lock-margins="true"
+     fit-margin-top="5"
+     fit-margin-left="5"
+     fit-margin-right="5"
+     fit-margin-bottom="5"
+     inkscape:window-width="1327"
+     inkscape:window-height="1001"
+     inkscape:window-x="476"
+     inkscape:window-y="22"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Livello 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(5.9812167,-3.8463445)">
+    <path
+       id="path873"
+       style="fill:#000000;fill-opacity:0.5;stroke:none;stroke-width:4.99999;stroke-linecap:round;stroke-linejoin:round;paint-order:markers fill stroke"
+       inkscape:transform-center-x="15.333225"
+       inkscape:transform-center-y="-12.7516"
+       d="M 77.172255,8.8480402 C 74.366831,8.893866 70.336214,9.8713638 64.508945,12.118639 27.214429,26.501215 79.381369,30.013468 50.429702,57.57323 21.478032,85.132992 20.538097,32.857124 4.3369082,69.398348 -11.864281,105.93957 27.506343,71.535388 26.522117,111.495 c -0.984226,39.95962 -38.613653,3.65958 -24.2310783,40.95409 14.3825753,37.29452 17.8953453,-14.87191 45.4551053,14.07976 27.559762,28.95167 -24.716622,29.8916 11.824601,46.0928 36.541222,16.20119 2.137558,-23.16996 42.097175,-22.18573 39.95961,0.98423 3.65957,38.61366 40.95408,24.23108 37.29452,-14.38257 -14.87242,-17.89483 14.07925,-45.45459 28.95167,-27.55976 29.8916,24.71662 46.09279,-11.8246 16.20119,-36.54123 -23.16943,-2.13756 -22.18521,-42.09717 0.98423,-39.959619 38.61366,-3.65957 24.23108,-40.954093 C 190.45734,37.04203 186.94457,89.208453 159.38481,60.256787 131.82504,31.305118 184.10143,30.365183 147.56021,14.163993 111.01898,-2.0371959 145.42265,37.333946 105.46304,36.349719 71.747108,35.519278 92.321547,8.6005807 77.172255,8.8480402 Z M 103.56548,62.743974 a 50.648809,50.648809 0 0 1 50.64858,50.649106 50.648809,50.648809 0 0 1 -50.64858,50.64859 50.648809,50.648809 0 0 1 -50.648592,-50.64859 50.648809,50.648809 0 0 1 50.648592,-50.649106 z"
+       inkscape:export-filename="C:\Users\fdibene\Desktop\gear.png"
+       inkscape:export-xdpi="1.9400001"
+       inkscape:export-ydpi="1.9400001" />
+  </g>
+</svg>
