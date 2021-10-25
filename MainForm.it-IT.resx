@@ -141,52 +141,55 @@
 </value>
   </data>
   <data name="NewNoteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>191, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="NewNoteToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Nuova Nota</value>
   </data>
   <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>188, 6</value>
+    <value>149, 6</value>
   </data>
   <data name="restoreToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>191, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="minimizeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>191, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="popUpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>191, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="popUpToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Visualizza tutte le note</value>
+    <value>&amp;Visualizza tutte</value>
   </data>
   <data name="ricaricaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>191, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="ricaricaToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Ricarica</value>
   </data>
   <data name="settingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>191, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="settingsToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Impostazioni</value>
   </data>
   <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>188, 6</value>
+    <value>149, 6</value>
   </data>
   <data name="InfoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>191, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="exitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>191, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="exitToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Esci</value>
   </data>
   <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 192</value>
+    <value>153, 192</value>
+  </data>
+  <data name="contextMenuStrip1.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="notifyIcon1.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1046,8 +1049,7 @@
         v+QffvkH8uTi4uLi4uLi4uLi4hK9fgUfAn9k5X7STQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="$this.ToolTip" xml:space="preserve">
+    <value />
   </data>
 </root>

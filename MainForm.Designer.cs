@@ -32,17 +32,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.NewNoteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.restoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.minimizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.NewNoteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.popUpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ricaricaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.InfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,6 +65,12 @@
             this.contextMenuStrip1.MouseEnter += new System.EventHandler(this.contextMenuStrip1_MouseEnter);
             this.contextMenuStrip1.MouseLeave += new System.EventHandler(this.contextMenuStrip1_MouseLeave);
             // 
+            // NewNoteToolStripMenuItem
+            // 
+            resources.ApplyResources(this.NewNoteToolStripMenuItem, "NewNoteToolStripMenuItem");
+            this.NewNoteToolStripMenuItem.Name = "NewNoteToolStripMenuItem";
+            this.NewNoteToolStripMenuItem.Click += new System.EventHandler(this.NewNoteToolStripMenuItem_Click);
+            // 
             // toolStripSeparator2
             // 
             resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
@@ -81,29 +87,6 @@
             resources.ApplyResources(this.minimizeToolStripMenuItem, "minimizeToolStripMenuItem");
             this.minimizeToolStripMenuItem.Name = "minimizeToolStripMenuItem";
             this.minimizeToolStripMenuItem.Click += new System.EventHandler(this.minimizeToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            // 
-            // exitToolStripMenuItem
-            // 
-            resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
-            // notifyIcon1
-            // 
-            resources.ApplyResources(this.notifyIcon1, "notifyIcon1");
-            this.notifyIcon1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseClick);
-            this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
-            // 
-            // NewNoteToolStripMenuItem
-            // 
-            resources.ApplyResources(this.NewNoteToolStripMenuItem, "NewNoteToolStripMenuItem");
-            this.NewNoteToolStripMenuItem.Name = "NewNoteToolStripMenuItem";
-            this.NewNoteToolStripMenuItem.Click += new System.EventHandler(this.NewNoteToolStripMenuItem_Click);
             // 
             // popUpToolStripMenuItem
             // 
@@ -126,12 +109,29 @@
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
             this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
+            // toolStripSeparator1
+            // 
+            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            // 
             // InfoToolStripMenuItem
             // 
             resources.ApplyResources(this.InfoToolStripMenuItem, "InfoToolStripMenuItem");
             this.InfoToolStripMenuItem.Image = global::DeskNote.Properties.Resources.info;
             this.InfoToolStripMenuItem.Name = "InfoToolStripMenuItem";
             this.InfoToolStripMenuItem.Click += new System.EventHandler(this.InfoToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // notifyIcon1
+            // 
+            resources.ApplyResources(this.notifyIcon1, "notifyIcon1");
+            this.notifyIcon1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseClick);
+            this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
             // 
             // MainForm
             // 
