@@ -266,12 +266,14 @@ namespace DeskNote
 
         private void deleteBox_Click(object sender, EventArgs e)
         {
+            DeskNote_Delete();
             this.Close();
         }
 
         private void DeskNote_Closing(object sender, CancelEventArgs e)
         {
-            e.Cancel = DeskNote_Delete();
+            
+            //e.Cancel = DeskNote_Delete();
         }
 
         private bool DeskNote_Delete()
