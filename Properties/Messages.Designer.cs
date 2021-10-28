@@ -70,11 +70,20 @@ namespace DeskNote.Properties {
         }
         
         /// <summary>
-        ///   Cerca una stringa localizzata simile a Desktop notes saved in realtime.
+        ///   Cerca una stringa localizzata simile a Take quick notes on your desktop.
         /// </summary>
         internal static string AppDescription {
             get {
                 return ResourceManager.GetString("AppDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Copyright (c) 2021 - Filippo Dibenedetto.
+        /// </summary>
+        internal static string Copyright {
+            get {
+                return ResourceManager.GetString("Copyright", resourceCulture);
             }
         }
         
@@ -111,6 +120,15 @@ namespace DeskNote.Properties {
         internal static string InvalidValue {
             get {
                 return ResourceManager.GetString("InvalidValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una stringa localizzata simile a Released under the terms of the GPL version 3 or any later version..
+        /// </summary>
+        internal static string License {
+            get {
+                return ResourceManager.GetString("License", resourceCulture);
             }
         }
         

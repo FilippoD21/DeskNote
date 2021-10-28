@@ -68,6 +68,7 @@
             this.Note.Name = "Note";
             this.Note.Size = new System.Drawing.Size(240, 222);
             this.Note.TabIndex = 6;
+            this.Note.TextChanged += new System.EventHandler(this.Note_TextChanged);
             // 
             // DeskNote
             // 
@@ -93,12 +94,17 @@
             this.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.DeskNote_MouseDoubleClick);
             this.Move += new System.EventHandler(this.DeskNote_Move);
             this.Resize += new System.EventHandler(this.DeskNote_Resize);
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DeskNote_Closing);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DeskNote_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.deleteBox)).EndInit();
             this.HeaderPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void Note_TextChanged1(object sender, System.EventArgs e)
+        {
+            throw new System.NotImplementedException();
         }
 
         #endregion

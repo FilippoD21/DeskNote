@@ -40,6 +40,7 @@ namespace DeskNote
             this.TitleBar.Leave += new EventHandler(this.TitleBar_Leave);
             this.TitleBar.KeyUp += new KeyEventHandler(this.TitleBar_KeyUp);
             this.TitleBar.Dragging += new EventHandler(TitleBar_Dragging);
+            this.TitleBar.TextChanged += new EventHandler(Note_TextChanged);
             this.HeaderPanel.Controls.Add(this.TitleBar);
             NoteFile = filename;
         }
@@ -264,16 +265,19 @@ namespace DeskNote
             MessageBox.Show("Double Click", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
+
         private void deleteBox_Click(object sender, EventArgs e)
         {
-            DeskNote_Delete();
             this.Close();
         }
 
-        private void DeskNote_Closing(object sender, CancelEventArgs e)
+        private void DeskNote_FormClosing(object sender, FormClosingEventArgs e)
         {
-            
-            //e.Cancel = DeskNote_Delete();
+            e.Cancel = false;
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                e.Cancel = DeskNote_Delete();
+            }
         }
 
         private bool DeskNote_Delete()

@@ -170,8 +170,8 @@ namespace DeskNote
                 Properties.Settings.Default.AppName + "\n" +
                 Properties.Messages.AppDescription + "\n\n" +
                 "Rel. " + Properties.Settings.Default.Release + "\n\n" +
-                "Copyright (c) 2020 - Filippo Dibenedetto\n" +
-                "Released under the terms of the GPL version 3 or any later version.";
+                Properties.Messages.Copyright + "\n" +
+                Properties.Messages.License;
             MessageBox.Show(programInfo, System.Reflection.Assembly.GetExecutingAssembly().GetName().Name, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -215,7 +215,7 @@ namespace DeskNote
             NewNote();
         }
 
-        private void ricaricaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void reloadToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Restart();
         }

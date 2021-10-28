@@ -121,7 +121,10 @@
     <value>The program is already running</value>
   </data>
   <data name="AppDescription" xml:space="preserve">
-    <value>Desktop notes saved in realtime</value>
+    <value>Take quick notes on your desktop</value>
+  </data>
+  <data name="Copyright" xml:space="preserve">
+    <value>Copyright (c) 2021 - Filippo Dibenedetto</value>
   </data>
   <data name="CreatingNoteError" xml:space="preserve">
     <value>Error while creating the note</value>
@@ -134,6 +137,9 @@
   </data>
   <data name="InvalidValue" xml:space="preserve">
     <value>Invalid value</value>
+  </data>
+  <data name="License" xml:space="preserve">
+    <value>Released under the terms of the GPL version 3 or any later version.</value>
   </data>
   <data name="ReadingNoteError" xml:space="preserve">
     <value>Error while reading the note</value>

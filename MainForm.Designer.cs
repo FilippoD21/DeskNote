@@ -100,7 +100,7 @@
             resources.ApplyResources(this.ricaricaToolStripMenuItem, "ricaricaToolStripMenuItem");
             this.ricaricaToolStripMenuItem.Image = global::DeskNote.Properties.Resources.reload;
             this.ricaricaToolStripMenuItem.Name = "ricaricaToolStripMenuItem";
-            this.ricaricaToolStripMenuItem.Click += new System.EventHandler(this.ricaricaToolStripMenuItem_Click);
+            this.ricaricaToolStripMenuItem.Click += new System.EventHandler(this.reloadToolStripMenuItem_Click);
             // 
             // settingsToolStripMenuItem
             // 
