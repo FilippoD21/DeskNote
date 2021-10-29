@@ -9,6 +9,8 @@ using System.Windows.Forms;
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
+using System.Threading;
+using System.Diagnostics;
 
 namespace DeskNote
 {
@@ -18,13 +20,16 @@ namespace DeskNote
         string NoteFile;
         bool AllowSave = false;
         private TitleBarTextBox TitleBar;
+        private bool CmdBoxHovering = false;
+        private MainForm Owner;
 
         [DllImport("User32.dll")]
         private static extern bool SetForegroundWindow(IntPtr hWnd);
 
-        public DeskNote(string filename)
+        public DeskNote(MainForm owner, string filename)
         {
             InitializeComponent();
+            Owner = owner;
             this.Width = Properties.Settings.Default.Width;
             this.Height = Properties.Settings.Default.Height;
             this.TitleBar = new TitleBarTextBox(this.Handle);
@@ -266,7 +271,7 @@ namespace DeskNote
         }
 
 
-        private void deleteBox_Click(object sender, EventArgs e)
+        private void DeleteBox_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -297,6 +302,59 @@ namespace DeskNote
                 }
             }
             return canc_state;
+        }
+
+        private void MenuBox_MouseHover(object sender, EventArgs e)
+        {
+            ShowCommandPanel(true);
+        }
+
+        private void MenuBox_MouseLeave(object sender, EventArgs e)
+        {
+            // not needed 
+        }
+
+        private void CmdBox_MouseHover(object sender, EventArgs e)
+        {
+            CmdBoxHovering = true;
+        }
+
+        private void CmdBox_MouseLeave(object sender, EventArgs e)
+        {
+            ShowCommandPanel(false);
+            CmdBoxHovering = false;
+        }
+
+        private void NewBox_Click(object sender, EventArgs e)
+        {
+            Owner.NewNote();
+        }
+
+        private void ShowCommandPanel(bool visible)
+        {
+            if (visible)
+            {
+                CommandPanel.Visible = true;
+                MenuBox.Visible = false;
+            }
+            else
+            {
+                new Thread(
+                    () => {
+                        Thread.Sleep(500);
+                        CommandPanel.Invoke((MethodInvoker)delegate {
+                            if (CommandPanel.Visible)
+                            {
+                                if (!CmdBoxHovering)
+                                {
+                                    CommandPanel.Visible = false;
+                                    MenuBox.Visible = true;
+                                }
+                            }
+                        });
+                    }
+                ).Start();
+            }
         }
     }
 }

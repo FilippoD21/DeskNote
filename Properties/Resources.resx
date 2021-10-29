@@ -136,4 +136,13 @@
   <data name="popup" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\res\popup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="delete_thin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\res\delete-thin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menu_thin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\res\menu-thin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="new_thin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\res\new-thin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

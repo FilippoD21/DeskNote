@@ -73,6 +73,16 @@ namespace DeskNote.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap delete_thin {
+            get {
+                object obj = ResourceManager.GetObject("delete_thin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DeskNote {
             get {
                 object obj = ResourceManager.GetObject("DeskNote", resourceCulture);
@@ -96,6 +106,26 @@ namespace DeskNote.Properties {
         internal static System.Drawing.Bitmap info {
             get {
                 object obj = ResourceManager.GetObject("info", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap menu_thin {
+            get {
+                object obj = ResourceManager.GetObject("menu_thin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap new_thin {
+            get {
+                object obj = ResourceManager.GetObject("new_thin", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

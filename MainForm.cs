@@ -100,14 +100,14 @@ namespace DeskNote
 
         private void LoadNote(string filename)
         {
-            DeskNote Note = new DeskNote(filename);
+            DeskNote Note = new DeskNote(this, filename);
             Note.Show();
             DeskNotes.Add(Note);
         }
 
-        private void NewNote()
+        public void NewNote()
         {
-            DeskNote Note = new DeskNote(Path.Combine(AppFolder, "DeskNote_" + DateTime.Now.ToString("yyyyMMddhhmmssffff") + ".dat"));
+            DeskNote Note = new DeskNote(this, Path.Combine(AppFolder, "DeskNote_" + DateTime.Now.ToString("yyyyMMddhhmmssffff") + ".dat"));
             Note.Show();
             DeskNotes.Add(Note);
         }

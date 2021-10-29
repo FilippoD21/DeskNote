@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="118.91642mm"
+   height="118.91642mm"
+   viewBox="0 0 118.91642 118.91642"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="new-thin.svg"
+   inkscape:export-filename="C:\Users\fdibene\Documents\Visual Studio 2017\Projects\DeskNote\res\new-thin.png"
+   inkscape:export-xdpi="3.4200001"
+   inkscape:export-ydpi="3.4200001"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="381.83766"
+     inkscape:cy="107.58125"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:pagecheckerboard="0"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <sodipodi:guide
+       position="71.895505,102.88025"
+       orientation="0,-1"
+       id="guide4855" />
+    <sodipodi:guide
+       position="126.95303,16.284922"
+       orientation="0,-1"
+       id="guide4857" />
+    <sodipodi:guide
+       position="16.036172,74.54968"
+       orientation="1,0"
+       id="guide4859" />
+    <sodipodi:guide
+       position="102.36423,57.978969"
+       orientation="1,0"
+       id="guide4861" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Livello 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-45.541677,-89.041862)">
+    <path
+       id="rect927-1"
+       style="fill:#000000;fill-opacity:0.25098;stroke-width:5.2806;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.25;paint-order:stroke markers fill"
+       d="m 110.845,107.59783 c -1.4928,-1.4928 -3.55738,-2.41344 -5.84511,-2.41344 -4.57544,0 -8.258913,3.68347 -8.258913,8.25891 v 26.79786 H 69.702715 c -4.575446,0 -8.258914,3.68347 -8.258916,8.25891 -10e-7,4.57545 3.683466,8.25891 8.258911,8.25891 h 27.038267 l -3.7e-4,26.53559 c 0,4.57544 3.683833,8.25928 8.259283,8.25928 4.57545,0 8.25928,-3.68384 8.25928,-8.25928 l -3.7e-4,-26.53559 h 26.26869 c 4.57544,0 8.25891,-3.68346 8.25891,-8.25891 0,-4.57545 -3.68346,-8.25891 -8.25891,-8.25891 l -26.26869,-1e-5 V 113.4433 c 1e-5,-2.28772 -0.921,-4.35267 -2.4138,-5.84547 z"
+       inkscape:export-filename="C:\Users\fdibene\Documents\Visual Studio 2017\Projects\DeskNote\res\new-thin.png"
+       inkscape:export-xdpi="4.71"
+       inkscape:export-ydpi="4.71"
+       sodipodi:nodetypes="ssscsssccsccsssccs" />
+  </g>
+</svg>

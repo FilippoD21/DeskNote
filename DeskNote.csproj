@@ -131,7 +131,10 @@
     <None Include="res\DeskNote.png" />
     <Content Include="DeskNote.ico" />
     <Content Include="res\del.png" />
+    <None Include="res\delete-thin.png" />
     <Content Include="res\delete.png" />
+    <None Include="res\new-thin.png" />
+    <None Include="res\menu-thin.png" />
     <Content Include="res\pencil.ico" />
     <Content Include="res\gear.png" />
     <Content Include="res\info.png" />
