@@ -21,7 +21,6 @@ namespace DeskNote
         bool AllowSave = false;
         private TitleBarTextBox TitleBar;
         private bool CmdBoxHovering = false;
-        private MainForm Owner;
 
         [DllImport("User32.dll")]
         private static extern bool SetForegroundWindow(IntPtr hWnd);
@@ -327,7 +326,7 @@ namespace DeskNote
 
         private void NewBox_Click(object sender, EventArgs e)
         {
-            Owner.NewNote();
+            ((MainForm)Owner).NewNote();
         }
 
         private void ShowCommandPanel(bool visible)

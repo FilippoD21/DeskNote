@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.IO;
+using System.Reflection;
 
 namespace DeskNote
 {
@@ -166,13 +167,14 @@ namespace DeskNote
 
         private void ProgInfo()
         {
+
             string programInfo =
                 Properties.Settings.Default.AppName + "\n" +
                 Properties.Messages.AppDescription + "\n\n" +
                 "Rel. " + Properties.Settings.Default.Release + "\n\n" +
                 Properties.Messages.Copyright + "\n" +
                 Properties.Messages.License;
-            MessageBox.Show(programInfo, System.Reflection.Assembly.GetExecutingAssembly().GetName().Name, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(programInfo, Properties.Settings.Default.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void Exit()
