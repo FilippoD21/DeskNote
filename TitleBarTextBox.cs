@@ -13,7 +13,7 @@ using System.Diagnostics;
 
 namespace DeskNote
 {
-    class TitleBarTextBox : TextBox
+    public class TitleBarTextBox : TextBox
     {
         public event EventHandler Dragging;
 

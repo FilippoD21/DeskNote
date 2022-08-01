@@ -121,7 +121,7 @@
   <data name="NewNoteToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAC
-        XgAAAl4BbMLKvgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAOKSURBVGhD7ZnL
+        XAAAAlwBEzwJNwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAOKSURBVGhD7ZnL
         TxNRFMbL2kcUXDVKkIUbNTEpf4AalybGRLcSpRgToxETdCksfDTKSyBGN2CMyCNCoiFKIiAohdKW4gva
         YhFK25k7M1VDKM/Y47llpg5lCjWmnanpl3xp2t6Z8/vuvXNmktFpTQCQzTBMJ3H0CMQ9yvI8Xyr+pX0h
         fI5AmAmLMT8M53WwaMwCR/3leUJIpThEu0L4nTzjd9mNuRF4yWH0SKVxXhCEenGo9kThBY44h4ry1sCn
@@ -1045,5 +1045,41 @@
         IIA3uw/nb9EQBPE7RAA4H6eh7DTy5xHEbx0ASKrx//R9+Hk4s/sfxhC/ZQCgTJcdBQvhv43nnP/78vL7
         v+QffvkH8uTi4uLi4uLi4uLi4hK9fgUfAn9k5X7STQAAAABJRU5ErkJggg==
 </value>
+  </data>
+  <data name="arrangeToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Disponi</value>
+  </data>
+  <data name="bottomFromLeftToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;6. In basso da sinistra</value>
+  </data>
+  <data name="bottomFromRightToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;5. In basso da destra</value>
+  </data>
+  <data name="leftFromBottomToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;7. A sinistra dal basso</value>
+  </data>
+  <data name="leftFromTopToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;8. A sinistra dall'alto</value>
+  </data>
+  <data name="rightFromBottomToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;4. A destra dal basso</value>
+  </data>
+  <data name="rightFromTopToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;3. A destra dall'alto</value>
+  </data>
+  <data name="topFromLeftToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;1. In alto da sinistra</value>
+  </data>
+  <data name="topFromRightToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;2. In alto da destra</value>
+  </data>
+  <data name="resizeChkToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Ridimensiona</value>
+  </data>
+  <data name="settingsToolStripMenuItem1.Text" xml:space="preserve">
+    <value>&amp;Impostazioni</value>
+  </data>
+  <data name="undoToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Annulla</value>
   </data>
 </root>

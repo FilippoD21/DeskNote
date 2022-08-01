@@ -48,7 +48,16 @@
       <Value Profile="(Default)">DeskNote</Value>
     </Setting>
     <Setting Name="Release" Type="System.String" Scope="User">
-      <Value Profile="(Default)">1.3.5</Value>
+      <Value Profile="(Default)">1.4.0</Value>
+    </Setting>
+    <Setting Name="ResizeOnW" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">250</Value>
+    </Setting>
+    <Setting Name="Resize" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ResizeOnH" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">100</Value>
     </Setting>
   </Settings>
 </SettingsFile>

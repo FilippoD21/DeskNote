@@ -113,6 +113,11 @@ namespace DeskNote
             DeskNotes.Add(Note);
         }
 
+        public void DeleteNote(DeskNote note)
+        {
+            DeskNotes.Remove(note);
+        }
+
         private void MainForm_Resize(object sender, EventArgs e)
         {
             if (this.WindowState == FormWindowState.Minimized)
@@ -132,6 +137,7 @@ namespace DeskNote
                 case MouseButtons.Right:
                     //contextMenuStrip1.Items["minimizeToolStripMenuItem"].Enabled = WindowState == FormWindowState.Normal;
                     //contextMenuStrip1.Items["restoreToolStripMenuItem"].Enabled = WindowState == FormWindowState.Minimized;
+                    resizeChkToolStripMenuItem.Checked = Properties.Settings.Default.Resize;
                     contextMenuStrip1.Show(Cursor.Position);
                     break;
             }
@@ -243,15 +249,117 @@ namespace DeskNote
                 
         }
 
-        private void contextMenuStrip1_MouseEnter(object sender, EventArgs e)
-        {
-            contextMenuStrip1.Show();
-            contextMenuStrip1.Focus();
-        }
-
         private void contextMenuStrip1_MouseLeave(object sender, EventArgs e)
         {
-            contextMenuStrip1.Hide();
+            if (!arrangeToolStripMenuItem.DropDown.Visible)
+            {
+                contextMenuStrip1.Hide();
+            } 
+        }
+
+        private void arrangeToolStripMenuItem_DropDown_MouseLeave(object sender, EventArgs e)
+        {
+            contextMenuStrip1.AutoClose = true;
+            arrangeToolStripMenuItem.DropDown.Close();
+        }
+        private void arrangeToolStripMenuItem_DropDown_Paint(object sender, EventArgs e)
+        {
+            contextMenuStrip1.AutoClose = false;
+
+        }
+
+        private void ArrangeNotes(ArrangeModes mode)
+        {
+            this.Activate();
+            Displacer displacer = new Displacer();
+            displacer.Margin = new Size(3, 3);
+
+            bool resize = resizeChkToolStripMenuItem.Checked;
+            int fixedWidth = Properties.Settings.Default.ResizeOnW;
+            int fixedHeight = Properties.Settings.Default.ResizeOnH;
+
+            undoToolStripMenuItem.Enabled = true;
+
+            List<DeskNote> deskNotesSorted = DeskNotes.OrderBy(o => o.CreationTime).ToList();
+            foreach (DeskNote Note in deskNotesSorted)
+            {
+                Note.WindowState = FormWindowState.Normal;
+                if (resize)
+                    displacer.Displace(Note, mode, fixedWidth, fixedHeight);
+                else
+                    displacer.Displace(Note, mode);
+                Note.Focus();
+                //Application.DoEvents();
+            }
+        }
+
+        private void topFromLeftToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ArrangeNotes(ArrangeModes.TopFromLeft);
+        }
+
+        private void topFromRightToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ArrangeNotes(ArrangeModes.TopFromRight);
+        }
+
+        private void rightFromTopToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ArrangeNotes(ArrangeModes.RightFromTop);
+        }
+
+        private void rightFromBottomToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ArrangeNotes(ArrangeModes.RightFromBottom);
+        }
+
+        private void bottomFromRightToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ArrangeNotes(ArrangeModes.BottomFromRight);
+        }
+
+        private void bottomFromLeftToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ArrangeNotes(ArrangeModes.BottomFromLeft);
+        }
+
+        private void leftFromBottomToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ArrangeNotes(ArrangeModes.LeftFromBottom);
+        }
+
+        private void leftFromTopToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ArrangeNotes(ArrangeModes.LeftFromTop);
+        }
+
+        private void resizeChkToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.Resize = resizeChkToolStripMenuItem.Checked;
+            Properties.Settings.Default.Save();
+        }
+
+        private void fixedWidthTxt_TextChanged(object sender, EventArgs e)
+        {
+            int fixedWidth = 0;
+            Properties.Settings.Default.ResizeOnW = fixedWidth;
+            Properties.Settings.Default.Save();
+        }
+        private void fixedHeightTxt_TextChanged(object sender, EventArgs e)
+        {
+            int fixedHeight = 0;
+            Properties.Settings.Default.ResizeOnH = fixedHeight;
+            Properties.Settings.Default.Save();
+        }
+
+        private void undoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            List<DeskNote> deskNotesSorted = DeskNotes.OrderBy(o => o.CreationTime).ToList();
+            foreach (DeskNote Note in deskNotesSorted)
+            {
+                Note.Undo();
+            }
+            undoToolStripMenuItem.Enabled = false;
         }
     }
 }

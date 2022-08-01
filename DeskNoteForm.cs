@@ -19,8 +19,22 @@ namespace DeskNote
 
         string NoteFile;
         bool AllowSave = false;
-        private TitleBarTextBox TitleBar;
+        public TitleBarTextBox TitleBar;
         private bool CmdBoxHovering = false;
+        private Rectangle UndoRectangle;
+
+        public TextBox NoteBox 
+        {
+            get { return Note; }
+        }
+        public DateTime CreationTime 
+        { 
+            get { return File.GetCreationTime(NoteFile); } 
+        }
+        public string Filename
+        {
+            get { return NoteFile; }
+        }
 
         [DllImport("User32.dll")]
         private static extern bool SetForegroundWindow(IntPtr hWnd);
@@ -29,31 +43,31 @@ namespace DeskNote
         {
             InitializeComponent();
             Owner = owner;
-            this.Width = Properties.Settings.Default.Width;
-            this.Height = Properties.Settings.Default.Height;
-            this.TitleBar = new TitleBarTextBox(this.Handle);
-            this.TitleBar.AcceptsReturn = true;
-            this.TitleBar.BackColor = Color.LemonChiffon;
-            this.TitleBar.BorderStyle = BorderStyle.None;
-            this.TitleBar.Dock = DockStyle.Fill;
-            this.TitleBar.Font = new Font("Consolas", 9.75F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
-            this.TitleBar.Location = new Point(0, 0);
-            this.TitleBar.Name = "TitleBar";
-            this.TitleBar.Size = new Size(this.Width-2, 16);
-            this.TitleBar.TabIndex = 0;
-            this.TitleBar.Leave += new EventHandler(this.TitleBar_Leave);
-            this.TitleBar.KeyUp += new KeyEventHandler(this.TitleBar_KeyUp);
-            this.TitleBar.Dragging += new EventHandler(TitleBar_Dragging);
-            this.TitleBar.TextChanged += new EventHandler(Note_TextChanged);
-            this.HeaderPanel.Controls.Add(this.TitleBar);
+            Width = Properties.Settings.Default.Width;
+            Height = Properties.Settings.Default.Height;
+            TitleBar = new TitleBarTextBox(Handle);
+            TitleBar.AcceptsReturn = true;
+            TitleBar.BackColor = Color.LemonChiffon;
+            TitleBar.BorderStyle = BorderStyle.None;
+            TitleBar.Dock = DockStyle.Fill;
+            TitleBar.Font = new Font("Consolas", 9.75F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
+            TitleBar.Location = new Point(0, 0);
+            TitleBar.Name = "TitleBar";
+            TitleBar.Size = new Size(Width-2, 16);
+            TitleBar.TabIndex = 0;
+            TitleBar.Leave += new EventHandler(TitleBar_Leave);
+            TitleBar.KeyUp += new KeyEventHandler(TitleBar_KeyUp);
+            TitleBar.Dragging += new EventHandler(TitleBar_Dragging);
+            TitleBar.TextChanged += new EventHandler(Note_TextChanged);
+            HeaderPanel.Controls.Add(TitleBar);
             NoteFile = filename;
+            UndoRectangle = new Rectangle();
         }
 
         void TitleBar_Dragging(object sender, EventArgs e)
         {
             TitleBar.HandleMouseMove();
         }
-
 
         protected override void WndProc(ref Message m)
         {
@@ -80,7 +94,7 @@ namespace DeskNote
                     if ((int)m.Result == HTCLIENT)
                     {
                         Point screenPoint = new Point(m.LParam.ToInt32());
-                        Point clientPoint = this.PointToClient(screenPoint);
+                        Point clientPoint = PointToClient(screenPoint);
                         if (clientPoint.Y <= RESIZE_HANDLE_SIZE)
                         {
                             if (clientPoint.X <= RESIZE_HANDLE_SIZE)
@@ -111,7 +125,7 @@ namespace DeskNote
                     }
                     return;
                 case WM_NCLBUTTONDBLCLK:
-                    TitleBar.Text = this.Text;
+                    TitleBar.Text = Text;
                     TitleBar.Visible = true;
                     TitleBar.Focus();
                     m.Result = IntPtr.Zero;
@@ -136,23 +150,23 @@ namespace DeskNote
             {
                 string[] lines = File.ReadAllText(NoteFile).Split(new[] { Environment.NewLine }, 2, StringSplitOptions.None);
                 string[] headerTxt = lines[0].Split(';');
-                int left = this.Left;
+                int left = Left;
                 int.TryParse(headerTxt[0], out left);
-                int top = this.Top;
+                int top = Top;
                 int.TryParse(headerTxt[1], out top);
-                int width = this.Width;
+                int width = Width;
                 int.TryParse(headerTxt[2], out width);
-                int height = this.Height;
+                int height = Height;
                 int.TryParse(headerTxt[3], out height);
-                this.Text = headerTxt[4];
+                Text = headerTxt[4];
                 TitleBar.Text = headerTxt[4];
                 Note.Text = lines[1];
                 Note.Select(Note.Text.Length, 0);
-                this.SetDesktopBounds(left, top, width, height);
+                SetDesktopBounds(left, top, width, height);
             }
             catch (Exception fParseEx)
             {
-                MessageBox.Show(Properties.Messages.ReadingNoteError + "\n" + fParseEx.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(Properties.Messages.ReadingNoteError + "\n" + fParseEx.Message, Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 NewFile();
             }
 
@@ -164,13 +178,13 @@ namespace DeskNote
             {
                 string title = "DeskNote " + DateTime.Now;
                 File.WriteAllText(NoteFile, "0;0;0;0;" + title + Environment.NewLine);
-                this.Text = title;
-                this.TitleBar.Text = title;
-                SetForegroundWindow(this.Handle);
+                Text = title;
+                TitleBar.Text = title;
+                SetForegroundWindow(Handle);
             }
             catch (Exception fileEx)
             {
-                MessageBox.Show(Properties.Messages.CreatingNoteError + "\n" + fileEx.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(Properties.Messages.CreatingNoteError + "\n" + fileEx.Message, Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -179,17 +193,17 @@ namespace DeskNote
         {
             if (AllowSave)
             {
-                if (this.Left > 0 && this.Top > 0 && this.Width > 0 && this.Height > 0)
+                if (Left > 0 && Top > 0 && Width > 0 && Height > 0)
                 {
                     try
                     {
                         File.WriteAllText(NoteFile,
-                            this.Left + ";" + this.Top + ";" + this.Width + ";" + this.Height + ";" + this.TitleBar.Text + Environment.NewLine +
+                            Left + ";" + Top + ";" + Width + ";" + Height + ";" + TitleBar.Text + Environment.NewLine +
                             Note.Text);
                     }
                     catch (Exception fileEx)
                     {
-                        MessageBox.Show(Properties.Messages.SavingNoteError + "\n" + fileEx.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(Properties.Messages.SavingNoteError + "\n" + fileEx.Message, Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -206,7 +220,7 @@ namespace DeskNote
 
         private void TitleBar_Leave(object sender, EventArgs e)
         {
-            this.Text = TitleBar.Text;
+            Text = TitleBar.Text;
             SaveFile();
         }
 
@@ -233,9 +247,9 @@ namespace DeskNote
 
         private void DeskNote_Load(object sender, EventArgs e)
         {
-            this.Opacity = Properties.Settings.Default.Opacity;
+            Opacity = Properties.Settings.Default.Opacity;
             Color backColor = ColorTranslator.FromHtml(Properties.Settings.Default.BackColor);
-            this.BackColor = backColor;
+            BackColor = backColor;
             Note.BackColor = backColor;
             HeaderPanel.BackColor = backColor;
             TitleBar.BackColor = backColor;
@@ -266,13 +280,13 @@ namespace DeskNote
 
         private void DeskNote_MouseDoubleClick(object sender, System.EventArgs e)
         {
-            MessageBox.Show("Double Click", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show("Double Click", Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
 
         private void DeleteBox_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void DeskNote_FormClosing(object sender, FormClosingEventArgs e)
@@ -287,20 +301,35 @@ namespace DeskNote
         private bool DeskNote_Delete()
         {
             bool canc_state = true;
-            DialogResult dr = MessageBox.Show(Properties.Messages.DeleteNote, this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult dr = MessageBox.Show(Properties.Messages.DeleteNote, Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
                 try
                 {
-                    File.Delete(NoteFile);
                     canc_state = false;
+                    File.Delete(NoteFile);
+                    ((MainForm)Owner).DeleteNote(this);
                 }
                 catch (Exception fileEx)
                 {
-                    MessageBox.Show(fileEx.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(fileEx.Message, Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             return canc_state;
+        }
+
+        public void SaveForUndo()
+        {
+            UndoRectangle = new Rectangle(Location, Size);
+        }
+
+        public void Undo()
+        {
+            Rectangle undo = new Rectangle();
+            undo = UndoRectangle;
+            Location = UndoRectangle.Location;
+            Size = UndoRectangle.Size;
+            UndoRectangle = undo;
         }
 
         private void MenuBox_MouseHover(object sender, EventArgs e)
@@ -355,5 +384,6 @@ namespace DeskNote
                 ).Start();
             }
         }
+
     }
 }

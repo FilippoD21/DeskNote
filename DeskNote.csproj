@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>DeskNote</RootNamespace>
     <AssemblyName>DeskNote</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
     <PublishUrl>C:\Users\fdibene\Documents\Visual Studio 2017\Projects\DeskNoteSetup\DeskNote\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -38,6 +39,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -47,6 +49,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>DeskNote.ico</ApplicationIcon>
@@ -59,10 +62,16 @@
     </ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <GenerateManifests>true</GenerateManifests>
+    <GenerateManifests>false</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -111,6 +120,7 @@
     <Compile Include="TitleBarTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="WindowDisplacer.cs" />
     <EmbeddedResource Include="DeskNoteForm.resx">
       <DependentUpon>DeskNoteForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -145,7 +155,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
-    <None Include="DeskNote_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -161,6 +171,15 @@
     <None Include="res\popup.png" />
     <None Include="res\DeskNote.png" />
     <Content Include="DeskNote.ico" />
+    <None Include="res\arrange.png" />
+    <Content Include="res\arrange_bottom_left.png" />
+    <Content Include="res\arrange_bottom_right.png" />
+    <Content Include="res\arrange_left_bottom.png" />
+    <Content Include="res\arrange_left_top.png" />
+    <Content Include="res\arrange_right_bottom.png" />
+    <Content Include="res\arrange_right_top.png" />
+    <Content Include="res\arrange_top_left.png" />
+    <Content Include="res\arrange_top_right.png" />
     <Content Include="res\del.png" />
     <None Include="res\delete-thin.png" />
     <Content Include="res\delete.png" />

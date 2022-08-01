@@ -42,6 +42,13 @@ namespace DeskNote
             WidthTxt.Text = Properties.Settings.Default.Width.ToString();
             HeightTxt.Text = Properties.Settings.Default.Height.ToString();
 
+            // resize on arrange
+            ResizeChk.Checked = Properties.Settings.Default.Resize;
+
+            // resize value
+            ResizeOnWTxt.Text = Properties.Settings.Default.ResizeOnW.ToString();
+            ResizeOnHTxt.Text = Properties.Settings.Default.ResizeOnH.ToString();
+
             ColorValueTxt.Text = Properties.Settings.Default.BackColor;
             ColorBox.BackColor = ColorTranslator.FromHtml(ColorValueTxt.Text);
             OpacityTxt.Text = Convert.ToInt16(Properties.Settings.Default.Opacity * 100d).ToString();
@@ -60,6 +67,7 @@ namespace DeskNote
 
         private void SaveBtn_Click(object sender, EventArgs e)
         {
+            int v = 0;
             // New Note shortcut
             Properties.Settings.Default.CtrlKey = CtrlChk.Checked;
             Properties.Settings.Default.AltKey = AltChk.Checked;
@@ -75,16 +83,27 @@ namespace DeskNote
             Properties.Settings.Default.KeyPop = KeyPop;
 
             // inital size
-            int w = Properties.Settings.Default.Width;
-            int.TryParse(WidthTxt.Text, out w);
-            Properties.Settings.Default.Width = w;
-            int h = Properties.Settings.Default.Height;
-            int.TryParse(WidthTxt.Text, out h);
-            Properties.Settings.Default.Width = h;
+            v = Properties.Settings.Default.Width;
+            int.TryParse(WidthTxt.Text, out v);
+            Properties.Settings.Default.Width = v;
+            v = Properties.Settings.Default.Height;
+            int.TryParse(HeightTxt.Text, out v);
+            Properties.Settings.Default.Height = v;
 
-            int opc = Convert.ToInt16(Properties.Settings.Default.Opacity * 100d);
-            int.TryParse(OpacityTxt.Text, out opc);
-            Properties.Settings.Default.Opacity = opc / 100d;
+            // resize on arrange
+            Properties.Settings.Default.Resize = ResizeChk.Checked;
+            
+            // resize values
+            v = Properties.Settings.Default.ResizeOnW;
+            int.TryParse(ResizeOnWTxt.Text, out v);
+            Properties.Settings.Default.ResizeOnW = v;
+            v = Properties.Settings.Default.ResizeOnH;
+            int.TryParse(ResizeOnHTxt.Text, out v);
+            Properties.Settings.Default.ResizeOnH = v;
+
+            v = Convert.ToInt16(Properties.Settings.Default.Opacity * 100d);
+            int.TryParse(OpacityTxt.Text, out v);
+            Properties.Settings.Default.Opacity = v / 100d;
 
             try
             {
@@ -96,6 +115,7 @@ namespace DeskNote
                 ColorValueTxt.Text = ColorTranslator.ToHtml(ColorBox.BackColor);
                 Properties.Settings.Default.BackColor = ColorValueTxt.Text.ToUpper();
             }
+
 
             Properties.Settings.Default.Save();
             Hide();
@@ -190,7 +210,8 @@ namespace DeskNote
                 ((CtrlChk.Checked || AltChk.Checked || ShiftChk.Checked || WinChk.Checked) && !string.IsNullOrEmpty(KeyTxt.Text)) &&
                 ((CtrlPopChk.Checked || AltPopChk.Checked || ShiftPopChk.Checked || WinPopChk.Checked) && !string.IsNullOrEmpty(KeyPopTxt.Text)) &&
                 int.TryParse(WidthTxt.Text, out val) &&
-                int.TryParse(HeightTxt.Text, out val);
+                int.TryParse(HeightTxt.Text, out val) &&
+                int.TryParse(ResizeOnWTxt.Text, out val);
         }
 
         private void WidthTxt_TextChanged(object sender, EventArgs e)
@@ -259,5 +280,13 @@ namespace DeskNote
             ValidateSaving();
         }
 
+        private void ResizeValueTxt_TextChanged(object sender, EventArgs e)
+        {
+            ValidateSaving();
+            int val;
+            if (!int.TryParse(ResizeOnWTxt.Text, out val))
+                MessageBox.Show(Properties.Messages.InvalidValue, Name, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+        }
     }
 }

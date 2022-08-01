@@ -54,6 +54,13 @@
             this.HeightTxt = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.ColorBox = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.ResizeChk = new System.Windows.Forms.CheckBox();
+            this.ResizeOnWTxt = new System.Windows.Forms.TextBox();
+            this.ResizeOnHTxt = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.OpacityBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ColorBox)).BeginInit();
             this.SuspendLayout();
@@ -118,8 +125,8 @@
             // 
             // OpacityBar
             // 
-            resources.ApplyResources(this.OpacityBar, "OpacityBar");
             this.OpacityBar.LargeChange = 10;
+            resources.ApplyResources(this.OpacityBar, "OpacityBar");
             this.OpacityBar.Maximum = 100;
             this.OpacityBar.Name = "OpacityBar";
             this.OpacityBar.SmallChange = 5;
@@ -214,18 +221,62 @@
             // 
             // ColorBox
             // 
-            resources.ApplyResources(this.ColorBox, "ColorBox");
             this.ColorBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.ColorBox, "ColorBox");
             this.ColorBox.Name = "ColorBox";
             this.ColorBox.TabStop = false;
             this.ColorBox.Click += new System.EventHandler(this.ColorBox_Click);
             // 
+            // label8
+            // 
+            resources.ApplyResources(this.label8, "label8");
+            this.label8.Name = "label8";
+            // 
+            // ResizeChk
+            // 
+            resources.ApplyResources(this.ResizeChk, "ResizeChk");
+            this.ResizeChk.Name = "ResizeChk";
+            this.ResizeChk.UseVisualStyleBackColor = true;
+            // 
+            // ResizeOnWTxt
+            // 
+            resources.ApplyResources(this.ResizeOnWTxt, "ResizeOnWTxt");
+            this.ResizeOnWTxt.Name = "ResizeOnWTxt";
+            this.ResizeOnWTxt.TextChanged += new System.EventHandler(this.ResizeValueTxt_TextChanged);
+            // 
+            // ResizeOnHTxt
+            // 
+            resources.ApplyResources(this.ResizeOnHTxt, "ResizeOnHTxt");
+            this.ResizeOnHTxt.Name = "ResizeOnHTxt";
+            // 
+            // label9
+            // 
+            resources.ApplyResources(this.label9, "label9");
+            this.label9.Name = "label9";
+            // 
+            // label10
+            // 
+            resources.ApplyResources(this.label10, "label10");
+            this.label10.Name = "label10";
+            // 
+            // label11
+            // 
+            resources.ApplyResources(this.label11, "label11");
+            this.label11.Name = "label11";
+            // 
             // SettingsForm
             // 
             this.AcceptButton = this.SaveBtn;
-            resources.ApplyResources(this, "$this");
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.ResizeOnHTxt);
+            this.Controls.Add(this.ResizeOnWTxt);
+            this.Controls.Add(this.ResizeChk);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.HeightTxt);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.WidthTxt);
@@ -288,5 +339,12 @@
         private System.Windows.Forms.TextBox WidthTxt;
         private System.Windows.Forms.TextBox HeightTxt;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.CheckBox ResizeChk;
+        private System.Windows.Forms.TextBox ResizeOnWTxt;
+        private System.Windows.Forms.TextBox ResizeOnHTxt;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
     }
 }
