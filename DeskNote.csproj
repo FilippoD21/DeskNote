@@ -168,6 +168,10 @@
     <None Include="res\reload.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="res\pin_off.png" />
+    <Content Include="res\pin_off_dark.png" />
+    <Content Include="res\pin_on.png" />
+    <Content Include="res\pin_on_dark.png" />
     <None Include="res\popup.png" />
     <None Include="res\DeskNote.png" />
     <Content Include="DeskNote.ico" />

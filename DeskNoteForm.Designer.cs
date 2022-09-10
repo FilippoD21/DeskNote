@@ -35,11 +35,13 @@
             this.DeleteBox = new System.Windows.Forms.PictureBox();
             this.MenuBox = new System.Windows.Forms.PictureBox();
             this.Note = new System.Windows.Forms.TextBox();
+            this.PinBox = new System.Windows.Forms.PictureBox();
             this.HeaderPanel.SuspendLayout();
             this.CommandPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NewBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeleteBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MenuBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PinBox)).BeginInit();
             this.SuspendLayout();
             // 
             // HeaderPanel
@@ -54,14 +56,29 @@
             // 
             // CommandPanel
             // 
+            this.CommandPanel.Controls.Add(this.PinBox);
             this.CommandPanel.Controls.Add(this.NewBox);
             this.CommandPanel.Controls.Add(this.DeleteBox);
             this.CommandPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.CommandPanel.Location = new System.Drawing.Point(191, 0);
             this.CommandPanel.Name = "CommandPanel";
-            this.CommandPanel.Size = new System.Drawing.Size(33, 18);
+            this.CommandPanel.Size = new System.Drawing.Size(49, 18);
             this.CommandPanel.TabIndex = 3;
             this.CommandPanel.Visible = false;
+            // 
+            // PinBox
+            // 
+            this.PinBox.Dock = System.Windows.Forms.DockStyle.Right;
+            this.PinBox.Image = global::DeskNote.Properties.Resources.pin_off;
+            this.PinBox.Location = new System.Drawing.Point(175, 0);
+            this.PinBox.Margin = new System.Windows.Forms.Padding(2);
+            this.PinBox.Name = "PinBox";
+            this.PinBox.Size = new System.Drawing.Size(16, 18);
+            this.PinBox.TabIndex = 8;
+            this.PinBox.TabStop = false;
+            this.PinBox.Click += new System.EventHandler(this.PinBox_Click);
+            this.PinBox.MouseLeave += new System.EventHandler(this.CmdBox_MouseLeave);
+            this.PinBox.MouseHover += new System.EventHandler(this.CmdBox_MouseHover);
             // 
             // NewBox
             // 
@@ -147,6 +164,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.NewBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeleteBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MenuBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PinBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -164,6 +182,7 @@
         private System.Windows.Forms.Panel CommandPanel;
         private System.Windows.Forms.PictureBox DeleteBox;
         private System.Windows.Forms.PictureBox NewBox;
+        private System.Windows.Forms.PictureBox PinBox;
     }
 }
 

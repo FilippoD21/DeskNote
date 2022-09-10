@@ -361,5 +361,24 @@ namespace DeskNote
             }
             undoToolStripMenuItem.Enabled = false;
         }
+
+        private void PinAll(bool topmost)
+        {
+            List<DeskNote> deskNotesSorted = DeskNotes.OrderBy(o => o.CreationTime).ToList();
+            foreach (DeskNote Note in deskNotesSorted)
+            {
+                Note.Pin(topmost);
+            }
+        }
+
+        private void pinAllToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PinAll(true);
+        }
+
+        private void unpinAllToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PinAll(false);
+        }
     }
 }

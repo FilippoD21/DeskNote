@@ -46,10 +46,12 @@
             this.bottomFromLeftToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.leftFromBottomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.leftFromTopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.resizeChkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.undoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.pinAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.unpinAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ricaricaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -118,9 +120,11 @@
             this.bottomFromLeftToolStripMenuItem,
             this.leftFromBottomToolStripMenuItem,
             this.leftFromTopToolStripMenuItem,
-            this.toolStripSeparator3,
             this.resizeChkToolStripMenuItem,
-            this.undoToolStripMenuItem});
+            this.undoToolStripMenuItem,
+            this.toolStripSeparator3,
+            this.pinAllToolStripMenuItem,
+            this.unpinAllToolStripMenuItem});
             this.arrangeToolStripMenuItem.Image = global::DeskNote.Properties.Resources.arrange;
             this.arrangeToolStripMenuItem.Name = "arrangeToolStripMenuItem";
             resources.ApplyResources(this.arrangeToolStripMenuItem, "arrangeToolStripMenuItem");
@@ -181,11 +185,6 @@
             resources.ApplyResources(this.leftFromTopToolStripMenuItem, "leftFromTopToolStripMenuItem");
             this.leftFromTopToolStripMenuItem.Click += new System.EventHandler(this.leftFromTopToolStripMenuItem_Click);
             // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
-            // 
             // resizeChkToolStripMenuItem
             // 
             this.resizeChkToolStripMenuItem.CheckOnClick = true;
@@ -206,6 +205,25 @@
             resources.ApplyResources(this.undoToolStripMenuItem, "undoToolStripMenuItem");
             this.undoToolStripMenuItem.Name = "undoToolStripMenuItem";
             this.undoToolStripMenuItem.Click += new System.EventHandler(this.undoToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
+            // 
+            // pinAllToolStripMenuItem
+            // 
+            this.pinAllToolStripMenuItem.Image = global::DeskNote.Properties.Resources.pin_on_dark;
+            this.pinAllToolStripMenuItem.Name = "pinAllToolStripMenuItem";
+            resources.ApplyResources(this.pinAllToolStripMenuItem, "pinAllToolStripMenuItem");
+            this.pinAllToolStripMenuItem.Click += new System.EventHandler(this.pinAllToolStripMenuItem_Click);
+            // 
+            // unpinAllToolStripMenuItem
+            // 
+            this.unpinAllToolStripMenuItem.Image = global::DeskNote.Properties.Resources.pin_off_dark;
+            this.unpinAllToolStripMenuItem.Name = "unpinAllToolStripMenuItem";
+            resources.ApplyResources(this.unpinAllToolStripMenuItem, "unpinAllToolStripMenuItem");
+            this.unpinAllToolStripMenuItem.Click += new System.EventHandler(this.unpinAllToolStripMenuItem_Click);
             // 
             // ricaricaToolStripMenuItem
             // 
@@ -286,5 +304,7 @@
         private System.Windows.Forms.ToolStripMenuItem resizeChkToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem undoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem pinAllToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem unpinAllToolStripMenuItem;
     }
 }

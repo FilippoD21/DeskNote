@@ -147,20 +147,20 @@
 </value>
   </data>
   <data name="NewNoteToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>127, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="NewNoteToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;New Note</value>
   </data>
   <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 6</value>
+    <value>177, 6</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="restoreToolStripMenuItem.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="restoreToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>127, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="restoreToolStripMenuItem.Text" xml:space="preserve">
     <value>Restore</value>
@@ -172,7 +172,7 @@
     <value>False</value>
   </data>
   <data name="minimizeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>127, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="minimizeToolStripMenuItem.Text" xml:space="preserve">
     <value>Minimize</value>
@@ -181,7 +181,7 @@
     <value>False</value>
   </data>
   <data name="popUpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>127, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="popUpToolStripMenuItem.Text" xml:space="preserve">
     <value>Show &amp;all</value>
@@ -234,8 +234,11 @@
   <data name="leftFromTopToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;8. Left from top</value>
   </data>
-  <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>183, 6</value>
+  <data name="settingsToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 22</value>
+  </data>
+  <data name="settingsToolStripMenuItem1.Text" xml:space="preserve">
+    <value>&amp;Settings</value>
   </data>
   <data name="resizeChkToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>186, 22</value>
@@ -252,53 +255,62 @@
   <data name="undoToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Undo</value>
   </data>
+  <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>183, 6</value>
+  </data>
+  <data name="pinAllToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>186, 22</value>
+  </data>
+  <data name="pinAllToolStripMenuItem.Text" xml:space="preserve">
+    <value>Pin All</value>
+  </data>
+  <data name="unpinAllToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>186, 22</value>
+  </data>
+  <data name="unpinAllToolStripMenuItem.Text" xml:space="preserve">
+    <value>Unpin All</value>
+  </data>
   <data name="arrangeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>127, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="arrangeToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Arrange</value>
   </data>
   <data name="ricaricaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>127, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="ricaricaToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Reload</value>
   </data>
   <data name="settingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>127, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="settingsToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Settings</value>
   </data>
   <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 6</value>
+    <value>177, 6</value>
   </data>
   <data name="InfoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>127, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="InfoToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Info</value>
   </data>
   <data name="exitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>127, 22</value>
+    <value>180, 22</value>
   </data>
   <data name="exitToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Exit</value>
   </data>
   <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>128, 214</value>
+    <value>181, 236</value>
   </data>
   <data name="&gt;&gt;contextMenuStrip1.Name" xml:space="preserve">
     <value>contextMenuStrip1</value>
   </data>
   <data name="&gt;&gt;contextMenuStrip1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="settingsToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="settingsToolStripMenuItem1.Text" xml:space="preserve">
-    <value>&amp;Settings</value>
   </data>
   <metadata name="notifyIcon1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>634, 17</value>
@@ -1266,12 +1278,6 @@
   <data name="&gt;&gt;leftFromTopToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolStripSeparator3.Name" xml:space="preserve">
-    <value>toolStripSeparator3</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;resizeChkToolStripMenuItem.Name" xml:space="preserve">
     <value>resizeChkToolStripMenuItem</value>
   </data>
@@ -1288,6 +1294,24 @@
     <value>undoToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;undoToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator3.Name" xml:space="preserve">
+    <value>toolStripSeparator3</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pinAllToolStripMenuItem.Name" xml:space="preserve">
+    <value>pinAllToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;pinAllToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;unpinAllToolStripMenuItem.Name" xml:space="preserve">
+    <value>unpinAllToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;unpinAllToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ricaricaToolStripMenuItem.Name" xml:space="preserve">

@@ -385,5 +385,23 @@ namespace DeskNote
             }
         }
 
+        public void Pin(bool topmost)
+        {
+            if (topmost)
+            {
+                TopMost = true;
+                PinBox.Image = Properties.Resources.pin_on;
+            }
+            else
+            {
+                TopMost = false;
+                PinBox.Image = Properties.Resources.pin_off;
+            }
+        }
+
+        private void PinBox_Click(object sender, EventArgs e)
+        {
+            Pin(!TopMost);
+        }
     }
 }
