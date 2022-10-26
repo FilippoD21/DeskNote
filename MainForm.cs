@@ -186,7 +186,7 @@ namespace DeskNote
             string programInfo =
                 Properties.Settings.Default.AppName + "\n" +
                 Properties.Messages.AppDescription + "\n\n" +
-                "Rel. " + Properties.Settings.Default.Release + "\n\n" +
+                "v. " + Properties.Settings.Default.Release + "\n\n" +
                 Properties.Messages.Copyright + "\n" +
                 Properties.Messages.License;
             MessageBox.Show(programInfo, Properties.Settings.Default.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);

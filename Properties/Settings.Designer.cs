@@ -202,7 +202,7 @@ namespace DeskNote.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1.4.2")]
+        [global::System.Configuration.DefaultSettingValueAttribute("1.5.0")]
         public string Release {
             get {
                 return ((string)(this["Release"]));

@@ -79,7 +79,7 @@ namespace DeskNote.Properties {
         }
         
         /// <summary>
-        ///   Cerca una stringa localizzata simile a Copyright (c) 2021 - Filippo Dibenedetto.
+        ///   Cerca una stringa localizzata simile a Copyright (c) 2021 2022 - DIB21 - Filippo Dibenedetto.
         /// </summary>
         internal static string Copyright {
             get {
