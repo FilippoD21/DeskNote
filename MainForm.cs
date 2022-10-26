@@ -97,6 +97,11 @@ namespace DeskNote
             {
                 LoadNote(note);
             }
+            resizeChkToolStripMenuItem.Checked = Properties.Settings.Default.Resize;
+            autoArrangeChkStripMenuItem.Checked = Properties.Settings.Default.AutoArrange;
+            ComponentResourceManager resources = new ComponentResourceManager(typeof(MainForm));
+            resources.ApplyResources(autoArrangeChkStripMenuItem, "autoArrangeChkStripMenuItem");
+            autoArrangeChkStripMenuItem.Text += " (Mode: " + Properties.Settings.Default.AutoArrangeMode.ToString() + ")";
         }
 
         private void LoadNote(string filename)
@@ -111,11 +116,15 @@ namespace DeskNote
             DeskNote Note = new DeskNote(this, Path.Combine(AppFolder, "DeskNote_" + DateTime.Now.ToString("yyyyMMddhhmmssffff") + ".dat"));
             Note.Show();
             DeskNotes.Add(Note);
+            if (Properties.Settings.Default.AutoArrange)
+                ArrangeNotes((ArrangeModes)Properties.Settings.Default.AutoArrangeMode);
         }
 
         public void DeleteNote(DeskNote note)
         {
             DeskNotes.Remove(note);
+            if (Properties.Settings.Default.AutoArrange)
+                ArrangeNotes((ArrangeModes)Properties.Settings.Default.AutoArrangeMode);
         }
 
         private void MainForm_Resize(object sender, EventArgs e)
@@ -291,6 +300,11 @@ namespace DeskNote
                 Note.Focus();
                 //Application.DoEvents();
             }
+            Properties.Settings.Default.AutoArrangeMode = (int)mode;
+            Properties.Settings.Default.Save();
+            ComponentResourceManager resources = new ComponentResourceManager(typeof(MainForm));
+            resources.ApplyResources(autoArrangeChkStripMenuItem, "autoArrangeChkStripMenuItem");
+            autoArrangeChkStripMenuItem.Text += " (Mode: " + ((int)mode).ToString() + ")";
         }
 
         private void topFromLeftToolStripMenuItem_Click(object sender, EventArgs e)
@@ -379,6 +393,12 @@ namespace DeskNote
         private void unpinAllToolStripMenuItem_Click(object sender, EventArgs e)
         {
             PinAll(false);
+        }
+
+        private void autoArrangeChkStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.AutoArrange = autoArrangeChkStripMenuItem.Checked;
+            Properties.Settings.Default.Save();
         }
     }
 }

@@ -370,16 +370,20 @@ namespace DeskNote
                 new Thread(
                     () => {
                         Thread.Sleep(500);
-                        CommandPanel.Invoke((MethodInvoker)delegate {
-                            if (CommandPanel.Visible)
-                            {
-                                if (!CmdBoxHovering)
+                        try
+                        {
+                            CommandPanel.Invoke((MethodInvoker)delegate {
+                                if (CommandPanel.Visible)
                                 {
-                                    CommandPanel.Visible = false;
-                                    MenuBox.Visible = true;
+                                    if (!CmdBoxHovering)
+                                    {
+                                        CommandPanel.Visible = false;
+                                        MenuBox.Visible = true;
+                                    }
                                 }
-                            }
-                        });
+                            });
+                        }
+                        catch { }
                     }
                 ).Start();
             }

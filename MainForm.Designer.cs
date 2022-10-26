@@ -48,6 +48,7 @@
             this.leftFromTopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.resizeChkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.autoArrangeChkStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.undoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.pinAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -121,6 +122,7 @@
             this.leftFromBottomToolStripMenuItem,
             this.leftFromTopToolStripMenuItem,
             this.resizeChkToolStripMenuItem,
+            this.autoArrangeChkStripMenuItem,
             this.undoToolStripMenuItem,
             this.toolStripSeparator3,
             this.pinAllToolStripMenuItem,
@@ -199,6 +201,13 @@
             this.settingsToolStripMenuItem1.Name = "settingsToolStripMenuItem1";
             resources.ApplyResources(this.settingsToolStripMenuItem1, "settingsToolStripMenuItem1");
             this.settingsToolStripMenuItem1.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
+            // 
+            // autoArrangeChkStripMenuItem
+            // 
+            this.autoArrangeChkStripMenuItem.CheckOnClick = true;
+            this.autoArrangeChkStripMenuItem.Name = "autoArrangeChkStripMenuItem";
+            resources.ApplyResources(this.autoArrangeChkStripMenuItem, "autoArrangeChkStripMenuItem");
+            this.autoArrangeChkStripMenuItem.Click += new System.EventHandler(this.autoArrangeChkStripMenuItem_Click);
             // 
             // undoToolStripMenuItem
             // 
@@ -306,5 +315,6 @@
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem pinAllToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem unpinAllToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem autoArrangeChkStripMenuItem;
     }
 }

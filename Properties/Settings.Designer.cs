@@ -202,7 +202,7 @@ namespace DeskNote.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1.4.1")]
+        [global::System.Configuration.DefaultSettingValueAttribute("1.4.2")]
         public string Release {
             get {
                 return ((string)(this["Release"]));
@@ -245,6 +245,30 @@ namespace DeskNote.Properties {
             }
             set {
                 this["ResizeOnH"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool AutoArrange {
+            get {
+                return ((bool)(this["AutoArrange"]));
+            }
+            set {
+                this["AutoArrange"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int AutoArrangeMode {
+            get {
+                return ((int)(this["AutoArrangeMode"]));
+            }
+            set {
+                this["AutoArrangeMode"] = value;
             }
         }
     }

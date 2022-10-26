@@ -121,7 +121,7 @@
   <data name="NewNoteToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAC
-        WwAAAlsBQXivSAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAOKSURBVGhD7ZnL
+        WgAAAloBkz9NrAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAOKSURBVGhD7ZnL
         TxNRFMbL2kcUXDVKkIUbNTEpf4AalybGRLcSpRgToxETdCksfDTKSyBGN2CMyCNCoiFKIiAohdKW4gva
         YhFK25k7M1VDKM/Y47llpg5lCjWmnanpl3xp2t6Z8/vuvXNmktFpTQCQzTBMJ3H0CMQ9yvI8Xyr+pX0h
         fI5AmAmLMT8M53WwaMwCR/3leUJIpThEu0L4nTzjd9mNuRF4yWH0SKVxXhCEenGo9kThBY44h4ry1sCn
@@ -1087,5 +1087,8 @@
   </data>
   <data name="unpinAllToolStripMenuItem.Text" xml:space="preserve">
     <value>Libera tutte</value>
+  </data>
+  <data name="autoArrangeChkStripMenuItem.Text" xml:space="preserve">
+    <value>Disponi au&amp;tomaticamente</value>
   </data>
 </root>
